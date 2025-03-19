@@ -11,18 +11,66 @@ const images = [
 let currentIndex = 0;
 
 window.onload = function() {
-    const slide = document.getElementById('bg-slide');
-    slide.style.transition = 'opacity 1s';
+    const container = document.querySelector('.bg-slideshow');
+
+    // Create two img elements (using let so we can swap their roles later)
+    let img1 = document.createElement('img');
+    let img2 = document.createElement('img');
+
+    // Set the initial sources
+    img1.src = images[currentIndex];
+    img2.src = images[(currentIndex + 1) % images.length];
+
+    // Assign the id "bg-slide" to each (note: duplicate IDs aren't ideal, but kept per your requirement)
+    img1.id = 'bg-slide';
+    img2.id = 'bg-slide';
+
+    // Set initial opacity and transitions
+    img1.style.opacity = '1';
+    img2.style.opacity = '0';
+    img1.style.transition = 'opacity 1s';
+    img2.style.transition = 'opacity 1s';
+
+    // Ensure images overlay each other
+    [img1, img2].forEach(img => {
+        img.style.position = 'absolute';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+    });
+
+    container.appendChild(img1);
+    container.appendChild(img2);
 
     function changeSlide() {
-        slide.style.opacity = 0; // Fade out
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            slide.src = images[currentIndex];
-            slide.style.opacity = 1; // Fade in
-        }, 1000); // Matches the transition duration
+        // Preload the next image using a temporary Image object
+        const nextIndex = (currentIndex + 1) % images.length;
+        let preloadImage = new Image();
+        preloadImage.src = images[nextIndex];
+
+        preloadImage.onload = function() {
+            // Start the crossfade transition
+            img1.style.opacity = '0';
+            img2.style.opacity = '1';
+
+            // After the transition duration, swap the roles
+            setTimeout(() => {
+                currentIndex = nextIndex;
+
+                // Swap img1 and img2 references
+                let temp = img1;
+                img1 = img2;
+                img2 = temp;
+
+                // Set up the hidden image (img2) with the upcoming image
+                const upcomingIndex = (currentIndex + 1) % images.length;
+                img2.src = images[upcomingIndex];
+                img2.style.opacity = '0';
+            }, 1000); // 1000ms matches the opacity transition duration
+        };
     }
 
-    // Change slides every 5 seconds
-    setInterval(changeSlide, 10000);
+    setInterval(changeSlide, 5000);
 };
