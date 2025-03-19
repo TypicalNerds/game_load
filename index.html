@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://typicalnerds.uk/css/styles.css">
+    <link rel="stylesheet" href="css/loading-styles.css">
+    <!-- JavaScript -->
+    <script src="js/volume.js"></script>
 
     <!-- Favicon Stuff -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -14,100 +17,38 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     
     <!-- Metadata For Website Embeds -->
-    <meta content="Typical Nerds" property="og:title" />
-    <meta content="Some site about a Nerd in Newcastle making Websites, Mobile Apps and DJing for fun." property="og:description" />
+    <meta content="Really Shitty Loading Screen" property="og:title" />
+    <meta content="This isn't meant to be visible to dumb fuck, get out." property="og:description" />
     <meta content="https://typicalnerds.uk" property="og:url" />
     <meta content="https://typicalnerds.uk/assets/images/embed.png" property="og:image" />
     <meta content="#00A6FF" data-react-helmet="true" name="theme-color" />
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>Typical Nerds</title>
+    <title>Game is Loading</title>
 </head>
 <body>
-    <header>
-      <!-- Site Logo -->
-        <div>
-            <img class="logo" src="/assets/images/typical-nerds-cyan.png" alt="">
-        </div>
-        <!-- Nav Bar -->
-        <nav>
-            <ul>
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="#socials">Socials</a></li>
-                <li><a href="/projects/radio/">Radio</a></li>
-                <li><a href="/about/">About Me</a></li>
-                <li><a href="mailto:contact@typicalnerds.uk">Contact</a></li>
-            </ul> 
-        </nav>
-    </header>
-
-    <section class="FirstSection" id="welcome">
+  <audio id="loading-music" loop autoplay>
+    <source src="assets/audio/GTAV-Loading.ogg" type="audio/ogg">
+  </audio>
+    <section class="LoadSection" id="Loading">
         <div class="video-background">
-            <video autoplay muted loop id="bg-video" poster="assets/videos/welcome/welcome-thumb.png">
-                <source src="/assets/videos/welcome/welcome.webm" type="video/webm">
-                <source src="/assets/videos/welcome/welcome.mp4" type="video/mp4">
-                <img src="/assets/videos/welcome/welcome-thumb.png"></img>
+            <video autoplay muted loop id="bg-video" poster="https://typicalnerds.uk/assets/videos/welcome/welcome-thumb.png">
+                <source src="https://typicalnerds.uk/assets/videos/welcome/welcome.webm" type="video/webm">
+                <source src="https://typicalnerds.uk/assets/videos/welcome/welcome.mp4" type="video/mp4">
+                <img src="https://typicalnerds.uk/assets/videos/welcome/welcome-thumb.png"></img>
             </video>
         </div>
-        <div class="content">
+        <div class="content" id="load-grid">
+          <!-- <img class="logo" src="https://typicalnerds.uk/assets/images/typical-nerds-cyan.png" alt=""> -->
+            <h1>
+                Welcome to Hell<br>
+            </h1>
             <h2>
-                Typical Nerds<br>
-                Exploration Station
+              Just Don't Fuck up the Server.
             </h2>
         </div>
         
     </section>
-    <section class="GridSection" id="HomeLinks">
-        <!-- <h2>Explore Here</h2> -->
-        <div class="grid-container">
-          <!-- About Me Hyperlink -->
-          <div class="GridItem" id="AboutGridItem">
-              <a href="/about/">
-                <h2>About Me</h2>
-              </a>
-          </div>
-          <!-- Projects Hyperlink -->
-          <div class="GridItem" id="ProjectsGridItem">
-            <!-- Open Android Radio Placeholder -->
-              <a href="/projects/radio/">
-                <h2>Open Android Radio</h2>
-            </a>
-          </div>
-          <!-- Contact Grid -->
-          <div class="GridItem" id="ContactGridItem">
-              <a href="mailto:contact@typicalnerds.uk">
-                <h2>Contact</h2>
-              </a>
-          </div>
-        </div>
-      </section>
 
-    <section class="GridSection" id="socials">
-        <div class="grid-container">
-          <!-- Platform 1 -->
-          <div class="GridItem" id="Twitch">
-              <a href="https://www.twitch.tv/electronicautism">
-                <h2>Twitch</h2>
-              </a>
-          </div>
-          <!-- Platform 2 -->
-          <div class="GridItem" id="YouTube">
-              <a href="https://www.youtube.com/@TypicalNerds">
-                <h2>YouTube</h2>
-            </a>
-          </div>
-          <!-- Platform 3 -->
-          <div class="GridItem" id="GitHub">
-              <a href="https://github.com/TypicalNerds/">
-                <h2>GitHub</h2>
-              </a>
-          </div>
-        </div>
-      </section>
-    <!-- Bottom Bar -->
-    <footer id="footer">
-      <h4>© Typical Nerds 2025</h4>
-      <h4>Some Assets Sourced from <a href="https://www.pexels.com/">Pexels</a></h4>
-    </footer>
   </body>
 </html>
