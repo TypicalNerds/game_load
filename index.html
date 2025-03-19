@@ -1,13 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8" />
-    <title>3 Idiots Loading</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Favicon Stuff -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Metadata For Website Embeds -->
+    <meta content="Typical Nerds" property="og:title" />
+    <meta content="Some site about a Nerd in Newcastle making Websites, Mobile Apps and DJing for fun." property="og:description" />
+    <meta content="https://typicalnerds.uk" property="og:url" />
+    <meta content="https://typicalnerds.uk/assets/images/embed.png" property="og:image" />
+    <meta content="#00A6FF" data-react-helmet="true" name="theme-color" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Typical Nerds</title>
 </head>
 <body>
     <header>
-        <t1>Test Page Please Ignore</t1>
+      <!-- Site Logo -->
+        <div>
+            <img class="logo" src="/assets/images/typical-nerds-cyan.png" alt="">
+        </div>
+        <!-- Nav Bar -->
+        <nav>
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#socials">Socials</a></li>
+                <li><a href="/projects/radio/">Radio</a></li>
+                <li><a href="/about/">About Me</a></li>
+                <li><a href="mailto:contact@typicalnerds.uk">Contact</a></li>
+            </ul> 
+        </nav>
     </header>
-    
-</body>
+
+    <section class="FirstSection" id="welcome">
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video" poster="assets/videos/welcome/welcome-thumb.png">
+                <source src="/assets/videos/welcome/welcome.webm" type="video/webm">
+                <source src="/assets/videos/welcome/welcome.mp4" type="video/mp4">
+                <img src="/assets/videos/welcome/welcome-thumb.png"></img>
+            </video>
+        </div>
+        <div class="content">
+            <h2>
+                Typical Nerds<br>
+                Exploration Station
+            </h2>
+        </div>
+        
+    </section>
+    <section class="GridSection" id="HomeLinks">
+        <!-- <h2>Explore Here</h2> -->
+        <div class="grid-container">
+          <!-- About Me Hyperlink -->
+          <div class="GridItem" id="AboutGridItem">
+              <a href="/about/">
+                <h2>About Me</h2>
+              </a>
+          </div>
+          <!-- Projects Hyperlink -->
+          <div class="GridItem" id="ProjectsGridItem">
+            <!-- Open Android Radio Placeholder -->
+              <a href="/projects/radio/">
+                <h2>Open Android Radio</h2>
+            </a>
+          </div>
+          <!-- Contact Grid -->
+          <div class="GridItem" id="ContactGridItem">
+              <a href="mailto:contact@typicalnerds.uk">
+                <h2>Contact</h2>
+              </a>
+          </div>
+        </div>
+      </section>
+
+    <section class="GridSection" id="socials">
+        <div class="grid-container">
+          <!-- Platform 1 -->
+          <div class="GridItem" id="Twitch">
+              <a href="https://www.twitch.tv/electronicautism">
+                <h2>Twitch</h2>
+              </a>
+          </div>
+          <!-- Platform 2 -->
+          <div class="GridItem" id="YouTube">
+              <a href="https://www.youtube.com/@TypicalNerds">
+                <h2>YouTube</h2>
+            </a>
+          </div>
+          <!-- Platform 3 -->
+          <div class="GridItem" id="GitHub">
+              <a href="https://github.com/TypicalNerds/">
+                <h2>GitHub</h2>
+              </a>
+          </div>
+        </div>
+      </section>
+    <!-- Bottom Bar -->
+    <footer id="footer">
+      <h4>© Typical Nerds 2025</h4>
+      <h4>Some Assets Sourced from <a href="https://www.pexels.com/">Pexels</a></h4>
+    </footer>
+  </body>
 </html>
