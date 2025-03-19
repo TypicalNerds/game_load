@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/loading-styles.css">
     <!-- JavaScript -->
     <script src="js/volume.js"></script>
+    <script src="js/loading-slides.js"></script>
 
     <!-- Favicon Stuff -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -28,18 +29,13 @@
 </head>
 <body>
   <audio id="loading-music" loop autoplay>
-    <source src="assets/audio/GTAV-Loading.ogg" type="audio/ogg">
+    <!-- <source src="assets/audio/GTAV-Loading.ogg" type="audio/ogg"> -->
   </audio>
     <section class="LoadSection" id="Loading">
-        <div class="video-background">
-            <video autoplay muted loop id="bg-video" poster="https://typicalnerds.uk/assets/videos/welcome/welcome-thumb.png">
-                <source src="https://typicalnerds.uk/assets/videos/welcome/welcome.webm" type="video/webm">
-                <source src="https://typicalnerds.uk/assets/videos/welcome/welcome.mp4" type="video/mp4">
-                <img src="https://typicalnerds.uk/assets/videos/welcome/welcome-thumb.png"></img>
-            </video>
+        <div class="bg-slideshow">
+            <img id="bg-slide" src="assets/images/idiots-s01e01.png">
         </div>
-        <div class="content" id="load-grid">
-          <!-- <img class="logo" src="https://typicalnerds.uk/assets/images/typical-nerds-cyan.png" alt=""> -->
+        <div class="content" id="load-content">
             <h1>
                 Welcome to Hell<br>
             </h1>

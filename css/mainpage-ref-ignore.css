@@ -1,0 +1,322 @@
+:root {
+    --GradientA: linear-gradient(to top, black, #232323);
+    --BrightText: #ffffff;
+    --StandardText: #EEEEEE;
+    --HyperText: #00a6ff;
+    --HoverColor: #000000;
+    --SectionABackground: #333333;
+    --SectionBBackground: #222222;
+    --SectionCBackground: #323232;
+  
+    --DefaultFontFamily: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    --fontSizeH1: 3rem;
+    --fontSizeH2: 2rem;
+    --fontSizeH3: 1.5rem;
+    --fontSizeH4: 1rem;
+  
+    --fontSizeP: large;
+  
+  }
+  
+  html, body {
+    background-image: var(--GradientA);
+    background-repeat: no-repeat;
+    background-attachment: local;
+  
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  
+    overflow-x: hidden;
+  
+    font-family: var(--DefaultFontFamily);
+    text-align: center;
+  
+    scroll-behavior: smooth;
+  
+  }
+  
+  h1 {
+      font-size: var(--fontSizeH1);
+      font-weight: bolder;
+      color: var(--BrightText);
+      margin: auto;
+  }
+  h2 {
+    font-size: var(--fontSizeH2);
+    font-weight: bold;
+    color: var(--BrightText);
+    margin: auto;
+  }
+  h3 {
+    font-size: var(--fontSizeH3);
+    color: var(--BrightText);
+    margin: auto;
+  }
+  h4 {
+    font-size: var(--fontSizeH4);
+    color: var(--BrightText);
+    margin: auto;
+  }
+  
+  a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--BrightText);
+  }
+  a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+  
+  
+  p {
+    font-size: var(--fontSizeP);
+    font-weight: normal;
+    color: var(--StandardText);
+    background-color: #00000055;
+    border-radius: 10px;
+    max-width: 65%;
+    margin: auto;
+  }
+  
+  .logo {
+    max-width: 1280px;
+    min-width: 50px;
+    min-height: 6vh;
+    max-height: 6vh;
+    margin: auto;
+  }
+  
+  header {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+  }
+  
+  nav {
+    height: 10%;
+  }
+  
+  footer {
+    width: 100%;
+    max-width: 1280px;
+    background-position: center;
+    background-size: cover;
+    height: 5vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  section {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+  }
+  
+  ul {
+      position: sticky;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #444444;
+    }
+    li {
+      float: left;
+      align-items: center;
+    }
+    
+    li a {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: var(--HoverColor);
+    }
+    
+    .active {
+      background-color: var(--HyperText);
+    }
+  
+  
+    .FirstSection, .SecondSection  {
+      position: relative;
+      width: 100%;
+      min-height: 50%;
+      max-height: 50%;
+      height: 50%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    #bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video fills the section */
+      pointer-events: none;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 10; /* Ensures text stays above the video */
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  
+  .SecondSection {
+    background-color: var(--SectionABackground);
+  }
+  
+  .SecondSection h2 {
+    background-color: #00000055;
+    border-radius: 10px;
+    max-width: 65%;
+    margin: auto;
+    margin-bottom: 1%;
+  }
+  
+  .GridSection {
+    background-color: var(--SectionCBackground);
+    display: grid;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .grid-container {
+    width: 100%;
+    max-width: 1280px;
+    box-sizing: border-box;
+  
+    margin: 0 auto;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 0px;
+   
+  }
+  
+  .GridItem {
+    position: relative;
+    height: 35vh;
+    overflow: hidden;
+    align-content: center;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Boring Background Shit */
+  
+  #about {
+    /* TODO - Replace this Image */
+    background-image: url("/assets/images/grid/laptop-coding.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #AboutGridItem {
+    background-image: url("/assets/images/grid/question-mark.png");
+  }
+  #ProjectsGridItem {
+    background-image: url("/assets/images/grid/radio-tuner.png");
+  }
+  #ContactGridItem {
+    background-image: url("/assets/images/grid/mail.png");
+  }
+  
+  
+  #GitHub {
+    background-image: url("/assets/images/platforms/GitHub.png");
+  }
+  #Twitch {
+    background-image: url("/assets/images/platforms/Twitch.png");
+  }
+  #YouTube {
+    background-image: url("/assets/images/platforms/YouTube.png");
+  }
+  
+  #Coding {
+    background-image: url("/assets/images/grid/network-switch.png");
+  }
+  #MultiMedia {
+    background-image: url("/assets/images/grid/projector.png");
+  }
+  #Certs {
+    background-image: url("/assets/images/grid/bookshelf.png");
+  }
+  #MetroDev {
+    background-image: url("/assets/images/platforms/GitHub.png");
+  }
+  #MetroFeatures {
+    background-image: url("/assets/images/platforms/Twitch.png");
+  }
+  #MetroLink {
+    background-image: url("/assets/images/platforms/YouTube.png");
+  }
+  
+  @media only screen and (max-width: 500px) {
+    :root {
+      --fontSizeH1: 2.5rem;
+      --fontSizeH2: 1.5rem;
+      --fontSizeH3: 1.0rem;
+      --fontSizeH4: 0.5rem;
+      --fontSizeP: medium;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    ul {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+  
+    
+  
+  }
