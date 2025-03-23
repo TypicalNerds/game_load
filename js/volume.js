@@ -2,6 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const audioElement = document.getElementById("loading-music");
     if (audioElement) {
-        audioElement.volume = 0.2; // Set volume to 20%
+        audioElement.volume = 0.05; // Set volume to 5% (It was really fucking loud otherwise)
     }
 });
