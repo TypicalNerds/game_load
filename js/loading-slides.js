@@ -77,5 +77,5 @@ window.onload = function() {
         };
     }
 
-    setInterval(changeSlide, 2500);
+    setInterval(changeSlide, 5500);
 };
