@@ -1,11 +1,16 @@
 const images = [
-    'assets/images/idiots-s01e01.png',
+    'assets/images/idiots-s01e01.jpg',
     'assets/images/idiots-s01e02.jpg',
-    // 'assets/images/idiots-s01e03.png',
-    'assets/images/idiots-s01e04.png',
-    'assets/images/idiots-s01e05.png',
-    'assets/images/idiots-s01e06.png',
-    'assets/images/idiots-s01e07.png',
+    // 'assets/images/idiots-s01e03.jpg',
+    'assets/images/idiots-s01e04.jpg',
+    'assets/images/idiots-s01e05.jpg',
+    'assets/images/idiots-s01e06.jpg',
+    'assets/images/idiots-s01e07.jpg',
+    'assets/images/idiots-fate-devoid-typical.jpg',
+    // 'assets/images/idiots-s02e01.jpg',
+    'assets/images/idiots-s02e02.jpg',
+    'assets/images/idiots-s02e03.jpg',
+    'assets/images/idiots-s02e04.jpg',
 ];
 
 let currentIndex = 0;
@@ -72,5 +77,5 @@ window.onload = function() {
         };
     }
 
-    setInterval(changeSlide, 5000);
+    setInterval(changeSlide, 2500);
 };
