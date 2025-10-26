@@ -7,10 +7,13 @@ const images = [
     'assets/images/idiots-s01e06.jpg',
     'assets/images/idiots-s01e07.jpg',
     'assets/images/idiots-fate-devoid-typical.jpg',
+    'assets/images/michaelsoft-binbows.jpg',
     // 'assets/images/idiots-s02e01.jpg',
     'assets/images/idiots-s02e02.jpg',
+    'assets/images/ssasr.jpg',
     'assets/images/idiots-s02e03.jpg',
     'assets/images/idiots-s02e04.jpg',
+    'assets/images/idiots-s02e06.jpg',
 ];
 
 let currentIndex = 0;
